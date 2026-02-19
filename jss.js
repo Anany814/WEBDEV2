@@ -122,20 +122,67 @@
 
 
 
-const p=new Promise((res,rej)=>{
-    console.log("Going to do homework")
-    setTimeout(()=>{
-        const done =true;
-        if(done){
-            res("Success");
-        }else{
-            rej("Failure to fetch data from server");
-        }
-    },3000)
-});
+// const p=new Promise((res,rej)=>{
+//     console.log("Going to do homework")
+//     setTimeout(()=>{
+//         const done =true;
+//         if(done){
+//             res("Success");
+//         }else{
+//             rej("Failure to fetch data from server");
+//         }
+//     },3000)
+// });
 
-p.then((a)=>{
-    console.log(a)
-}).catch((err)=>{
-    console.log(err)
-})
+// p.then((a)=>{
+//     console.log(a)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+
+// let obj={
+//     name:"John",
+//     age:30,
+    
+// }
+
+// localStorage.setItem("obj",JSON.stringify(obj))
+
+
+// localStorage.setItem("name","John")
+// localStorage.setItem("age",30)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("age")
+// localStorage.clear() //clear everything in local storage
+
+// sessionStorage.setItem("name","John")
+// sessionStorage.setItem("age",30)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("age")
+// sessionStorage.clear() //clear everything in session storage
+
+// sessionStorage.setItem("name","John")
+// sessionStorage.setItem("age",30)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("age")
+// sessionStorage.clear() //clear everything in session storage
+
+
+document.cookie="name=John; expires=Fri, 20 FEB 2026 23:59:59 UTC;"
+document.cookie="age=30; expires=Fri, 18 FEB 2026 23:59:59 UTC;"
+
+
+async function sample(){
+    await fetch("https://http://127.0.0.1:5500/jss.js")
+}
+sample()
